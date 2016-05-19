@@ -83,8 +83,16 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint8_t byte;
   while (1)
   {
+
+ // if(CDC_Receive_FS (&byte, 1) !=1)
+  //	continue;
+
+  CDC_Transmit_FS("\r\nyou typed",11);
+ // CDC_Transmit_FS(&byte,1);
+ // CDC_Transmit_FS("\r\n",2);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */

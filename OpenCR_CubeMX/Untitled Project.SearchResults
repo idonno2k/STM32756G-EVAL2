@@ -1,1 +1,5 @@
----- sbrk Matches (0 in 0 files) ----
+---- USBD_CDC_ReceivePacket Matches (4 in 3 files) ----
+Usbd_cdc.c (middlewares\st\stm32_usb_device_library\class\cdc\src):  * @brief  USBD_CDC_ReceivePacket
+Usbd_cdc.c (middlewares\st\stm32_usb_device_library\class\cdc\src):uint8_t  USBD_CDC_ReceivePacket(USBD_HandleTypeDef *pdev)
+Usbd_cdc.h (middlewares\st\stm32_usb_device_library\class\cdc\inc):uint8_t  USBD_CDC_ReceivePacket      (USBD_HandleTypeDef *pdev);
+Usbd_cdc_if.c (src):  USBD_CDC_ReceivePacket(hUsbDevice_0);
