@@ -77,6 +77,8 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
 
+
+HAL_Delay(5000);
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -87,12 +89,11 @@ int main(void)
   while (1)
   {
 
- // if(CDC_Receive_FS (&byte, 1) !=1)
-  //	continue;
 
-  CDC_Transmit_FS("\r\nyou typed",11);
- // CDC_Transmit_FS(&byte,1);
- // CDC_Transmit_FS("\r\n",2);
+ // CDC_Transmit_FS("\r\nyou typed",11);
+ HAL_Delay(500);
+  //CDC_Transmit_FS(&byte,1);
+  //CDC_Transmit_FS("\r\n",2);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */

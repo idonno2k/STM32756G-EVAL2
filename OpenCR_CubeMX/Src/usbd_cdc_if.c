@@ -59,8 +59,8 @@
 /* USER CODE BEGIN PRIVATE_DEFINES */
 /* Define size for the receive and transmit buffer over CDC */
 /* It's up to user to redefine and/or remove those define */
-#define APP_RX_DATA_SIZE  4
-#define APP_TX_DATA_SIZE  4
+#define APP_RX_DATA_SIZE  2048
+#define APP_TX_DATA_SIZE  2048
 /* USER CODE END PRIVATE_DEFINES */
 /**
   * @}
@@ -91,6 +91,15 @@ uint8_t UserTxBufferFS[APP_TX_DATA_SIZE];
 /* Handle for USB Full Speed IP */
   USBD_HandleTypeDef  *hUsbDevice_0;
 /* USER CODE BEGIN PRIVATE_VARIABLES */
+
+USBD_CDC_LineCodingTypeDef LineCoding =
+{
+  115200, /* baud rate*/
+  0x00,   /* stop bits-1*/
+  0x00,   /* parity - none*/
+  0x08    /* nb. of bits 8*/
+};
+
 /* USER CODE END PRIVATE_VARIABLES */
 
 /**
@@ -217,7 +226,13 @@ static int8_t CDC_Control_FS  (uint8_t cmd, uint8_t* pbuf, uint16_t length)
     break;
 
   case CDC_GET_LINE_CODING:     
-
+    pbuf[0] = (uint8_t)(LineCoding.bitrate);
+    pbuf[1] = (uint8_t)(LineCoding.bitrate >> 8);
+    pbuf[2] = (uint8_t)(LineCoding.bitrate >> 16);
+    pbuf[3] = (uint8_t)(LineCoding.bitrate >> 24);
+    pbuf[4] = LineCoding.format;
+    pbuf[5] = LineCoding.paritytype;
+    pbuf[6] = LineCoding.datatype;  
     break;
 
   case CDC_SET_CONTROL_LINE_STATE:
@@ -254,11 +269,11 @@ static int8_t CDC_Control_FS  (uint8_t cmd, uint8_t* pbuf, uint16_t length)
 static int8_t CDC_Receive_FS (uint8_t* Buf, uint32_t *Len)
 {
   /* USER CODE BEGIN 6 */
-  USBD_CDC_SetRxBuffer(hUsbDevice_0, &Buf[0]);
-  USBD_CDC_ReceivePacket(hUsbDevice_0);
+  uint8_t result = USBD_OK;
 
-    USBD_CDC_SetTxBuffer(hUsbDevice_0, Buf, Len);
-  USBD_CDC_TransmitPacket(hUsbDevice_0);
+  USBD_CDC_SetRxBuffer(hUsbDevice_0, Buf, Len);
+   CDC_Transmit_FS(Buf,Len);
+
   return (USBD_OK);
   /* USER CODE END 6 */ 
 }
