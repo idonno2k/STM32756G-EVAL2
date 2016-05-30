@@ -18,7 +18,5 @@ SUBDIRS := \
 Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/gcc \
 Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates \
 Drivers/STM32F7xx_HAL_Driver/Src \
-Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
-Middlewares/ST/STM32_USB_Device_Library/Core/Src \
 Src \
 

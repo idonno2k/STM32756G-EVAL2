@@ -23,9 +23,6 @@ Src/stm32f7xx_it.o: ../Src/stm32f7xx_it.c \
  D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h \
  D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h \
- D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h \
- D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
- D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
  D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Inc/stm32f7xx_it.h
 
 D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
@@ -75,11 +72,5 @@ D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_
 D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h:
 
 D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h:
-
-D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h:
-
-D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h:
-
-D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h:
 
 D:/git/STM32756G-EVAL2/OpenCR_CubeMX/Inc/stm32f7xx_it.h:
